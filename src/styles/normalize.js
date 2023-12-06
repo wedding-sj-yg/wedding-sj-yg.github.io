@@ -1,3 +1,4 @@
+/** @jsxImportSource @emotion/react */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * base.ts
@@ -29,6 +30,11 @@ const normalize = css`
 
   body {
     margin: 0;
+  }
+
+  html,
+  body {
+    font-family: 'San Francisco';
   }
 
   /**
