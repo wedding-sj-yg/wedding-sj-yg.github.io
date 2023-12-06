@@ -33,7 +33,10 @@ const normalize = css`
   }
 
   html,
-  body {
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
     font-family: 'San Francisco';
   }
 
