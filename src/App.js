@@ -12,38 +12,57 @@ function App() {
   }, []);
 
   return (
-    <section css={section}>
-      <div css={[imageWrapper]}>
-        <div css={[imageContent, isFadeIn && fadeIn]}>
-          <img
-            src="/images/wedding-invitation-image.png"
-            alt="청첩장 이미지"
-            width="100%"
-          />
+    <div css={root}>
+      <section css={section}>
+        <div css={content}>
+          <div css={[imageWrapper]}>
+            <div css={[imageContent, isFadeIn && fadeIn]}>
+              <img
+                src="/images/wedding-invitation-image.png"
+                alt="청첩장 이미지"
+                width="100%"
+              />
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
       <div css={[scroll, isFadeIn && fadeIn]}>
         <Lottie animationData={scrollDownLottie} style={{ width: '70px' }} />
       </div>
-    </section>
+    </div>
   );
 }
+
+const root = css`
+  width: 100%;
+  height: 100%;
+`;
 
 const section = css`
   position: relative;
   width: 100%;
-  height: 100%;
-  padding: 24px;
+  height: 300vh;
   box-sizing: border-box;
 `;
 
+const content = css`
+  position: sticky;
+  top: 0;
+  height: 100vh;
+`;
+
 const imageWrapper = css`
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -160px;
   width: 100%;
   max-width: 320px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const imageContent = css`
