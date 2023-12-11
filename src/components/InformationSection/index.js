@@ -57,7 +57,7 @@ const InformationSection = () => {
 
   return (
     <section css={section}>
-      <div css={text}>
+      <div css={[text, line]}>
         <div>
           <strong>김연복 · 이경자</strong>의 &nbsp;&nbsp;&nbsp;딸{' '}
           <strong>여규</strong>
@@ -131,7 +131,12 @@ const InformationSection = () => {
 };
 
 const section = css`
-  padding: 24px;
+  padding: 0 24px 90px;
+`;
+
+const line = css`
+  border-top: 1px solid #ededec;
+  padding-top: 24px;
 `;
 
 const text = css`
@@ -183,6 +188,7 @@ const buttonStyle = css`
   outline: 0;
   flex: 1;
   font-size: 13px;
+  color: #000;
   display: flex;
   justify-content: center;
   align-items: center;

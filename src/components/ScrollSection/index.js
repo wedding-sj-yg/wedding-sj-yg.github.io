@@ -27,7 +27,10 @@ const ScrollSection = ({ scrollRef, animation }) => {
           ]}
         >
           <h1 css={[head, animation === 'FIRST' && headTransition]}>
-            배우자가 되겠습니다.
+            <span css={[highlighted, animation === 'FIRST' && delayOne]}>
+              배우자
+            </span>
+            가 되겠습니다.
           </h1>
         </div>
         <div
@@ -45,11 +48,23 @@ const ScrollSection = ({ scrollRef, animation }) => {
               animation === 'SECOND' && headTransition,
             ]}
           >
-            아내에게 배우자는 마음과
+            아내에게{' '}
+            <span css={[highlighted, animation === 'SECOND' && delayOne]}>
+              배우자
+            </span>
+            는 마음과
             <br />
-            남편에게 배우자는 자세와
+            남편에게{' '}
+            <span css={[highlighted, animation === 'SECOND' && delayTwo]}>
+              배우자
+            </span>
+            는 자세와
             <br />
-            서로에게 배우자는 의지로
+            서로에게{' '}
+            <span css={[highlighted, animation === 'SECOND' && delayThree]}>
+              배우자
+            </span>
+            는 의지로
           </h2>
         </div>
         <div
@@ -62,19 +77,25 @@ const ScrollSection = ({ scrollRef, animation }) => {
             css={[
               head,
               multiLineTextWithBlackColor,
+              thirdHead,
               animation === 'THIRD' && headTransition,
             ]}
           >
-            한평생 서로에게
-            <br />
-            가장 좋은 배우자가 되겠습니다.
-            <br />
-            저희 배움을 응원해 주세요.
-            <br />
             <Lottie
               animationData={congratulationLottie}
-              style={{ width: '70px', margin: '0 auto' }}
+              style={{ width: '120px', margin: '0 auto' }}
             />
+            한평생 서로에게
+            <br />
+            가장 좋은{' '}
+            <span css={[highlighted, animation === 'THIRD' && delayOne]}>
+              배우자
+            </span>
+            가 되겠습니다.
+            <br />
+            <span css={[highlighted, animation === 'THIRD' && delayTwo]}>
+              저희 배움을 응원해 주세요.
+            </span>
           </h2>
         </div>
       </div>
@@ -158,14 +179,62 @@ const head = css`
   color: #fff;
 `;
 
+const headTransition = css`
+  opacity: 1;
+  transform: translateY(0px);
+`;
+
+const thirdHead = css`
+  margin-bottom: 120px;
+`;
+
 const multiLineTextWithBlackColor = css`
   color: #000;
   line-height: 1.5;
 `;
 
-const headTransition = css`
-  opacity: 1;
-  transform: translateY(0px);
+const highlighted = css`
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 10px;
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    background: rgba(52, 232, 158, 0.5);
+    z-index: -1;
+  }
+  /* box-shadow: inset 0 -10px 0 rgba(52, 232, 158, 0.5); */
+`;
+
+const delayOne = css`
+  &:after {
+    transition: all 0.4s 0.4s;
+    width: 100%;
+  }
+`;
+
+const delayTwo = css`
+  &:after {
+    transition: all 0.4s 0.8s;
+    width: 100%;
+  }
+`;
+
+const delayThree = css`
+  &:after {
+    transition: all 0.4s 1.2s;
+    width: 100%;
+  }
+`;
+
+const delayFour = css`
+  &:after {
+    transition: all 0.4s 0.4s;
+    width: 100%;
+  }
 `;
 
 export default ScrollSection;
