@@ -24,6 +24,7 @@
     "react-hooks/exhaustive-deps": "off",
     "react/display-name": "off",
     "react/no-unknown-property": ["error", { "ignore": ["css"] }],
+    "react/prop-types": 0,
     "jsx-a11y/anchor-is-valid": "off",
     "jsx-a11y/interactive-supports-focus": "off",
     "jsx-a11y/click-events-have-key-events": "off",
