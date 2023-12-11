@@ -22,22 +22,32 @@ const MAP_BUTTON_LABELS = [
 
 const InformationSection = () => {
   const handleClickMapButton = (id) => {
-    if (id === 'NAVER') {
-      window.open(
-        'https://map.naver.com/p/entry/place/1929913788?c=15.00,0,0,0,dh',
-        '_blank',
-      );
-    } else if (id === 'KAKAO') {
-      window.Kakao.init(process.env.REACT_APP_KAKAO_KEY);
+    switch (id) {
+      case 'NAVER': {
+        window.open(
+          'https://map.naver.com/p/entry/place/1929913788?c=15.00,0,0,0,dh',
+          '_blank',
+        );
+        break;
+      }
+      case 'KAKAO': {
+        window.Kakao.init(process.env.REACT_APP_KAKAO_KEY);
 
-      window.Kakao.Navi.start({
-        name: '아펠가모 공덕',
-        x: 126.9513333,
-        y: 37.5428592,
-        coordType: 'wgs84',
-      });
-    } else {
-      location.href = 'tmap://search?name=아펠가모공덕';
+        window.Kakao.Navi.start({
+          name: '아펠가모 공덕',
+          x: 126.9513333,
+          y: 37.5428592,
+          coordType: 'wgs84',
+        });
+        break;
+      }
+      case 'TMAP': {
+        location.href = 'tmap://search?name=아펠가모공덕';
+        break;
+      }
+      default: {
+        break;
+      }
     }
   };
 
@@ -68,7 +78,7 @@ const InformationSection = () => {
       </div>
       <div css={information}>
         <div css={[text, date]}>
-          <strong css={semiBold}>
+          <strong>
             2024년 3월 9일 토요일 오후 2시
             <br />
             아펠가모 공덕 라로브홀
@@ -147,10 +157,6 @@ const text = css`
 
 const information = css`
   margin-top: 60px;
-`;
-
-const semiBold = css`
-  font-weight: 600;
 `;
 
 const date = css`

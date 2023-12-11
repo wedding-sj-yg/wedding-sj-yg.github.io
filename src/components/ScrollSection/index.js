@@ -2,8 +2,18 @@
 import { css, keyframes } from '@emotion/react';
 import Lottie from 'lottie-react';
 import congratulationLottie from '../../lotties/animation-congratulation.json';
+import heartLottie from '../../lotties/animation-heart.json';
+import { useEffect, useRef } from 'react';
 
 const ScrollSection = ({ scrollRef, animation }) => {
+  const heartRef = useRef();
+
+  useEffect(() => {
+    if (heartRef) {
+      heartRef.current.setSpeed(1.7);
+    }
+  }, [heartRef]);
+
   return (
     <section ref={scrollRef} css={scrollSection}>
       <div css={content}>
@@ -45,9 +55,15 @@ const ScrollSection = ({ scrollRef, animation }) => {
             css={[
               head,
               multiLineTextWithBlackColor,
+              thirdHead,
               animation === 'SECOND' && headTransition,
             ]}
           >
+            <Lottie
+              animationData={heartLottie}
+              lottieRef={heartRef}
+              style={{ width: '120px', margin: '0 auto' }}
+            />
             아내에게{' '}
             <span css={[highlighted, animation === 'SECOND' && delayOne]}>
               배우자
