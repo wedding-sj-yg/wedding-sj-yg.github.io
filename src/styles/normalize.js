@@ -373,6 +373,15 @@ const normalize = css`
     padding: 0;
     margin: 0;
   }
+
+  a,
+  button {
+    background: none;
+    border: 0;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+  }
 `;
 
 export default normalize;

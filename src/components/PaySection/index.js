@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import React, { useEffect } from 'react';
+import React from 'react';
 import { css } from '@emotion/react';
 
 const BRIDE_LABELS_LIST = [
@@ -195,6 +195,7 @@ const bank = css`
 const name = css`
   display: inline-block;
   position: relative;
+  font-weight: 700;
 
   &:before {
     content: '';

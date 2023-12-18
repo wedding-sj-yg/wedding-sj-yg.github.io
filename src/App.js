@@ -7,6 +7,8 @@ import ScrollSection from './components/ScrollSection';
 import { useEffect, useRef, useState } from 'react';
 import InformationSection from './components/InformationSection';
 import PaySection from './components/PaySection';
+import PhotoSection from './components/PhotoSection';
+import ContactSection from './components/ContactSection';
 
 const SCROLL_SECTION_LENGTH = 4;
 
@@ -32,6 +34,10 @@ function App() {
     }
   };
 
+  const handleClickFloatingButton = () => {
+    window.open('https://www.instagram.com/ssik_zip/', '_blank');
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
     window.addEventListener('scroll', handleScroll);
@@ -44,6 +50,8 @@ function App() {
   return (
     <div css={root}>
       <ScrollSection scrollRef={scrollRef} animation={animation} />
+      <PhotoSection />
+      <ContactSection />
       <InformationSection />
       <PaySection />
       <div css={[scroll, appearFromBottomAnimation]}>
@@ -56,8 +64,16 @@ function App() {
           style={{ width: '70px' }}
         />
       </div>
-      <button type="button" css={ourStoryButton}>
-        <img src="/images/icon-our-story.png" alt="우리의 이야기" width={52} />
+      <button
+        type="button"
+        css={ourStoryButton}
+        onClick={handleClickFloatingButton}
+      >
+        <img
+          src="/images/icon-floating-black.png"
+          alt="우리의 이야기"
+          width={40}
+        />
       </button>
     </div>
   );
@@ -92,16 +108,20 @@ const appearFromBottomAnimation = css`
 
 const ourStoryButton = css`
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 20px;
+  right: 20px;
   display: inline-block;
-  /* background: rgba(52, 232, 158, 1); */
-  background: #1a3e25;
-  padding: 5px;
+  /* background: #1a3e25; */
+  background: #dcf2de;
+  padding: 8px;
   border-radius: 50%;
   border: 0;
   cursor: pointer;
   z-index: 10;
+  box-shadow:
+    rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
+    rgba(0, 0, 0, 0.1) 0px 4px 6px,
+    rgba(0, 0, 0, 0.15) 0px 8px 30px;
 
   img {
     display: block;

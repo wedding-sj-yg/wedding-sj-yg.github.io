@@ -130,8 +130,7 @@ const content = css`
   top: 0;
   width: 100%;
   height: 100vh;
-  background: rgb(118 189 160);
-  /* background: #1a3e25; */
+  background: #2cbf89;
 `;
 
 const contentWrapper = css`
