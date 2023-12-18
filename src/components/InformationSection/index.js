@@ -91,7 +91,7 @@ const InformationSection = () => {
           css={[
             text,
             css`
-              margin-bottom: 30px;
+              margin-bottom: 50px;
             `,
           ]}
         >
@@ -128,7 +128,7 @@ const InformationSection = () => {
         </div>
         <div
           css={css`
-            margin-top: 40px;
+            margin-top: 50px;
           `}
         >
           <ul css={list}>
@@ -186,7 +186,7 @@ const sectionTitle = css`
   span {
     position: relative;
     display: inline-block;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 700;
 
     &:before {
@@ -215,11 +215,11 @@ const text = css`
 `;
 
 const semiBold = css`
-  font-weight: 500;
+  font-weight: 600;
 `;
 
 const address = css`
-  margin-top: 30px;
+  margin-top: 16px;
   font-size: 15px;
   color: #333;
 `;

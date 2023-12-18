@@ -130,7 +130,7 @@ const sectionTitle = css`
   span {
     position: relative;
     display: inline-block;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 700;
 
     &:before {
@@ -159,8 +159,8 @@ const box = css`
 
 const title = css`
   margin-bottom: 30px;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 600;
 `;
 
 const listItem = css`
