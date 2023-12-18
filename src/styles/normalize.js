@@ -11,6 +11,13 @@
 import { css } from '@emotion/react';
 
 const normalize = css`
+  * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
   /**
    * 1. 모든 브라우저에서 줄 높이를 수정합니다.
    * 2. iOS에서 포트레이트 변경후 글꼴 크기 조정을 방지합니다.
@@ -358,6 +365,13 @@ const normalize = css`
 
   [hidden] {
     display: none;
+  }
+
+  ul,
+  li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
 `;
 

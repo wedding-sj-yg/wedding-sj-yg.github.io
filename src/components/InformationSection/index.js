@@ -76,13 +76,33 @@ const InformationSection = () => {
           <strong>이용호 · 이영숙</strong>의 아들 <strong>성준</strong>
         </div>
       </div>
-      <div css={information}>
-        <div css={[text, date]}>
-          <strong>
+      <div
+        css={css`
+          margin-top: 60px;
+        `}
+      >
+        <div
+          css={[
+            text,
+            css`
+              margin-bottom: 30px;
+            `,
+          ]}
+        >
+          <strong
+            css={css`
+              font-size: 22px;
+            `}
+          >
             2024년 3월 9일 토요일 오후 2시
             <br />
             아펠가모 공덕 라로브홀
           </strong>
+          <div css={address}>
+            서울특별시 마포구 마포대로92
+            <br />
+            효성해링턴스퀘어 B동 7층
+          </div>
         </div>
         <div>
           <div id="map" css={naverMap} />
@@ -102,35 +122,40 @@ const InformationSection = () => {
             })}
           </div>
         </div>
-        <div css={place}>
+        <div
+          css={css`
+            margin-top: 30px;
+          `}
+        >
           <ul css={list}>
-            <li css={listItem}>
-              <div css={title}>
-                <strong>주소</strong>
-              </div>
-              <div>서울특별시 마포구 마포대로92 효성해링턴스퀘어 B동 7층</div>
-            </li>
             <li css={listItem}>
               <div css={title}>
                 <strong>지하철</strong>
               </div>
-              <div>공덕역 7번 출구 방향으로 나와 우측 골목 직진</div>
+              <div css={content}>
+                공덕역 7번 출구 방향으로 나와 우측 골목 직진
+              </div>
             </li>
             <li css={listItem}>
               <div css={title}>
                 <strong>주차</strong>
               </div>
-              <div>효성해링턴스퀘어 본 건물 주차 (2시간 무료)</div>
+              <div css={content}>
+                효성해링턴스퀘어 본 건물 주차 (2시간 무료)
+              </div>
             </li>
             <li css={listItem}>
               <div css={title}>
                 <strong>안내</strong>
               </div>
               <div>
-                예식 당일 주차 혼잡이 예상되오니, 가급적 대중교통 이용을 권장
-                드립니다.
-                <br />
-                화환은 정중히 사양합니다. 좋은 마음만 감사히 받겠습니다.
+                <div css={content}>
+                  예식 당일 주차 혼잡이 예상되오니, 가급적 대중교통 이용을 권장
+                  드립니다.
+                </div>
+                <div css={content}>
+                  화환은 정중히 사양합니다. 좋은 마음만 감사히 받겠습니다.
+                </div>
               </div>
             </li>
           </ul>
@@ -141,7 +166,7 @@ const InformationSection = () => {
 };
 
 const section = css`
-  padding: 0 24px 90px;
+  padding: 0 24px;
 `;
 
 const line = css`
@@ -153,18 +178,17 @@ const text = css`
   font-size: 1.5em;
   text-align: center;
   line-height: 1.5;
+  color: #333;
+
+  strong {
+    color: #000;
+  }
 `;
 
-const information = css`
-  margin-top: 60px;
-`;
-
-const date = css`
-  margin-bottom: 30px;
-`;
-
-const place = css`
-  margin-top: 30px;
+const address = css`
+  margin-top: 10px;
+  font-size: 15px;
+  color: #333;
 `;
 
 const list = css`
@@ -175,12 +199,32 @@ const list = css`
 
 const listItem = css`
   & + & {
-    margin-top: 15px;
+    margin-top: 20px;
   }
 `;
 
 const title = css`
   margin-bottom: 4px;
+  font-size: 14px;
+`;
+
+const content = css`
+  position: relative;
+  padding-left: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #333;
+  word-break: keep-all;
+  &:before {
+    content: '·';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  & + & {
+    margin-top: 5px;
+  }
 `;
 
 const buttonsWrapper = css`

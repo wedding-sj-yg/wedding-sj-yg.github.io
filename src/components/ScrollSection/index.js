@@ -130,6 +130,7 @@ const content = css`
   top: 0;
   width: 100%;
   height: 100vh;
+  background: rgb(118 189 160);
 `;
 
 const contentWrapper = css`
@@ -152,9 +153,12 @@ const imageWrapper = css`
 `;
 
 const imageContent = css`
-  box-shadow:
-    rgba(0, 0, 0, 0.15) 0px 15px 25px,
-    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  img {
+    border-radius: 16px;
+    box-shadow:
+      rgba(0, 0, 0, 0.15) 0px 15px 25px,
+      rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  }
 `;
 
 const appearFromBottom = keyframes`
@@ -242,13 +246,6 @@ const delayTwo = css`
 const delayThree = css`
   &:after {
     transition: all 0.4s 1.2s;
-    width: 100%;
-  }
-`;
-
-const delayFour = css`
-  &:after {
-    transition: all 0.4s 0.4s;
     width: 100%;
   }
 `;

@@ -6,6 +6,7 @@ import scrollDownWhiteLottie from './lotties/animation-scroll-down-white.json';
 import ScrollSection from './components/ScrollSection';
 import { useEffect, useRef, useState } from 'react';
 import InformationSection from './components/InformationSection';
+import PaySection from './components/PaySection';
 
 const SCROLL_SECTION_LENGTH = 4;
 
@@ -44,6 +45,7 @@ function App() {
     <div css={root}>
       <ScrollSection scrollRef={scrollRef} animation={animation} />
       <InformationSection />
+      <PaySection />
       <div css={[scroll, appearFromBottomAnimation]}>
         <Lottie
           animationData={
