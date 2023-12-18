@@ -57,7 +57,7 @@ function App() {
         />
       </div>
       <button type="button" css={ourStoryButton}>
-        <img src="/images/icon-our-story.png" alt="우리의 이야기" width={42} />
+        <img src="/images/icon-our-story.png" alt="우리의 이야기" width={52} />
       </button>
     </div>
   );

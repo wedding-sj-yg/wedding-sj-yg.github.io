@@ -100,7 +100,7 @@ const PaySection = () => {
                     copyToClipboard(`${item.bank} ${item.accountNumber}`);
                   }}
                 >
-                  <img src="/images/icon-copy.png" alt="복사하기" width={12} />
+                  <img src="/images/icon-copy.png" alt="복사하기" width={16} />
                   복사하기
                 </button>
               </li>
@@ -132,7 +132,7 @@ const box = css`
 
 const sectionTitle = css`
   margin-bottom: 25px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
 `;
 
@@ -140,7 +140,7 @@ const listItem = css`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
 
   & + & {
@@ -189,7 +189,7 @@ const copyButton = css`
   justify-content: center;
   align-items: center;
   padding: 4px 6px;
-  font-size: 11px;
+  font-size: 13px;
   color: #333;
   cursor: pointer;
 

@@ -205,13 +205,13 @@ const listItem = css`
 
 const title = css`
   margin-bottom: 4px;
-  font-size: 14px;
+  font-size: 15px;
 `;
 
 const content = css`
   position: relative;
   padding-left: 8px;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.5;
   color: #333;
   word-break: keep-all;
