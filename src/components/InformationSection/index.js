@@ -6,17 +6,17 @@ const MAP_BUTTON_LABELS = [
   {
     id: 'NAVER',
     title: '네이버 지도',
-    iconUrl: '/images/icon-navermap.png',
+    iconUrl: '/images/icon-naver-marker.png',
   },
   {
     id: 'KAKAO',
     title: '카카오 내비',
-    iconUrl: '/images/icon-kakaonavi.png',
+    iconUrl: '/images/icon-kakao-marker.png',
   },
   {
     id: 'TMAP',
     title: '티맵',
-    iconUrl: '/images/icon-tmap.png',
+    iconUrl: '/images/icon-tmap-marker.png',
   },
 ];
 
@@ -77,10 +77,16 @@ const InformationSection = () => {
         </div>
       </div>
       <div
-        css={css`
-          margin-top: 60px;
-        `}
+        css={[
+          line,
+          css`
+            margin-top: 32px;
+          `,
+        ]}
       >
+        <div css={sectionTitle}>
+          <span>오시는 길</span>
+        </div>
         <div
           css={[
             text,
@@ -89,11 +95,7 @@ const InformationSection = () => {
             `,
           ]}
         >
-          <strong
-            css={css`
-              font-size: 22px;
-            `}
-          >
+          <strong css={semiBold}>
             2024년 3월 9일 토요일 오후 2시
             <br />
             아펠가모 공덕 라로브홀
@@ -115,8 +117,10 @@ const InformationSection = () => {
                   css={buttonStyle}
                   onClick={() => handleClickMapButton(item.id)}
                 >
-                  <img src={item.iconUrl} alt={item.title} css={buttonIcon} />
-                  <span css={iconTitle}>{item.title}</span>
+                  <div css={buttonIconWrapper}>
+                    <img src={item.iconUrl} alt={item.title} css={buttonIcon} />
+                  </div>
+                  <div css={iconTitle}>{item.title}</div>
                 </button>
               );
             })}
@@ -171,11 +175,36 @@ const section = css`
 
 const line = css`
   border-top: 1px solid #ededec;
-  padding-top: 24px;
+  padding-top: 32px;
+`;
+
+const sectionTitle = css`
+  position: relative;
+  margin-bottom: 20px;
+  text-align: center;
+
+  span {
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 5px;
+      background: rgba(52, 232, 158, 0.5);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
 `;
 
 const text = css`
-  font-size: 1.5em;
+  font-size: 20px;
   text-align: center;
   line-height: 1.5;
   color: #333;
@@ -183,6 +212,10 @@ const text = css`
   strong {
     color: #000;
   }
+`;
+
+const semiBold = css`
+  font-weight: 500;
 `;
 
 const address = css`
@@ -228,46 +261,45 @@ const content = css`
 `;
 
 const buttonsWrapper = css`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-const buttonStyle = css`
-  border: 0;
-  outline: 0;
-  flex: 1;
-  font-size: 13px;
-  color: #000;
+  margin-top: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
-  padding: 13px 0;
-  position: relative;
-  & + & {
-    &:after {
-      content: '';
-      display: inline-block;
-      position: absolute;
-      top: 10px;
-      left: 0;
-      width: 1px;
-      height: 50%;
-      background: #333;
-      opacity: 0.3;
-    }
-  }
+  gap: 15px;
+`;
+
+const buttonStyle = css`
+  /* flex: 1; */
+  width: 60px;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+`;
+
+const buttonIconWrapper = css`
+  background: #f5f5f5;
+  border-radius: 50%;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const buttonIcon = css`
   position: relative;
-  top: -1px;
-  width: 16px;
+  width: 15px;
 `;
 
 const iconTitle = css`
-  display: inline-block;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #333;
+  text-align: center;
 `;
 
 const naverMap = css`

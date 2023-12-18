@@ -52,8 +52,11 @@ const PaySection = () => {
 
   return (
     <div css={root}>
+      <div css={sectionTitle}>
+        <span>마음 전하는 곳</span>
+      </div>
       <div css={box}>
-        <div css={sectionTitle}>신부측 계좌번호</div>
+        <div css={title}>신부측 계좌번호</div>
         <ul>
           {BRIDE_LABELS_LIST.map((item, index) => {
             return (
@@ -81,7 +84,7 @@ const PaySection = () => {
         </ul>
       </div>
       <div css={box}>
-        <div css={sectionTitle}>신랑측 계좌번호</div>
+        <div css={title}>신랑측 계좌번호</div>
         <ul>
           {GROOM_LABELS_LIST.map((item, index) => {
             return (
@@ -116,8 +119,29 @@ const root = css`
   padding: 60px 24px 40px;
 `;
 
-const title = css`
-  font-size: 21px;
+const sectionTitle = css`
+  position: relative;
+  margin-bottom: 20px;
+  text-align: center;
+
+  span {
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 5px;
+      background: rgba(52, 232, 158, 0.5);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
 `;
 
 const box = css`
@@ -130,7 +154,7 @@ const box = css`
   }
 `;
 
-const sectionTitle = css`
+const title = css`
   margin-bottom: 25px;
   font-size: 16px;
   font-weight: 700;
