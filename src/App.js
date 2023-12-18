@@ -56,6 +56,9 @@ function App() {
           style={{ width: '70px' }}
         />
       </div>
+      <button type="button" css={ourStoryButton}>
+        <img src="/images/icon-our-story.png" alt="우리의 이야기" width={42} />
+      </button>
     </div>
   );
 }
@@ -85,6 +88,24 @@ const appearFromBottom = keyframes`
 
 const appearFromBottomAnimation = css`
   animation: ${appearFromBottom} 1s ease;
+`;
+
+const ourStoryButton = css`
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: inline-block;
+  /* background: rgba(52, 232, 158, 1); */
+  background: #1a3e25;
+  padding: 5px;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  z-index: 10;
+
+  img {
+    display: block;
+  }
 `;
 
 export default App;
