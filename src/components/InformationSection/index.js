@@ -80,7 +80,7 @@ const InformationSection = () => {
         css={[
           line,
           css`
-            margin-top: 32px;
+            margin-top: 50px;
           `,
         ]}
       >
@@ -128,7 +128,7 @@ const InformationSection = () => {
         </div>
         <div
           css={css`
-            margin-top: 30px;
+            margin-top: 40px;
           `}
         >
           <ul css={list}>
@@ -175,12 +175,12 @@ const section = css`
 
 const line = css`
   border-top: 1px solid #ededec;
-  padding-top: 32px;
+  padding-top: 50px;
 `;
 
 const sectionTitle = css`
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   text-align: center;
 
   span {
@@ -193,7 +193,7 @@ const sectionTitle = css`
       content: '';
       display: block;
       width: 100%;
-      height: 5px;
+      height: 10px;
       background: rgba(52, 232, 158, 0.5);
       position: absolute;
       bottom: 0;
@@ -219,7 +219,7 @@ const semiBold = css`
 `;
 
 const address = css`
-  margin-top: 10px;
+  margin-top: 30px;
   font-size: 15px;
   color: #333;
 `;
@@ -261,7 +261,7 @@ const content = css`
 `;
 
 const buttonsWrapper = css`
-  margin-top: 12px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;

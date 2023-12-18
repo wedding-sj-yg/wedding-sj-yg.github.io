@@ -116,13 +116,16 @@ const PaySection = () => {
 };
 
 const root = css`
-  padding: 60px 24px 40px;
+  padding: 0 24px 50px;
+  margin-top: 50px;
 `;
 
 const sectionTitle = css`
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   text-align: center;
+  padding-top: 50px;
+  border-top: 1px solid #ededec;
 
   span {
     position: relative;
@@ -134,7 +137,7 @@ const sectionTitle = css`
       content: '';
       display: block;
       width: 100%;
-      height: 5px;
+      height: 10px;
       background: rgba(52, 232, 158, 0.5);
       position: absolute;
       bottom: 0;
@@ -155,7 +158,7 @@ const box = css`
 `;
 
 const title = css`
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   font-size: 16px;
   font-weight: 700;
 `;
@@ -168,7 +171,7 @@ const listItem = css`
   font-weight: 500;
 
   & + & {
-    margin-top: 20px;
+    margin-top: 25px;
   }
 `;
 
