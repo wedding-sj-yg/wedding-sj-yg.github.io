@@ -75,6 +75,9 @@ function App() {
           width={40}
         />
       </button>
+      <footer css={footer}>
+        © Directed by YeoGyu. Developed by SeongJun All Rights Reserved.
+      </footer>
     </div>
   );
 }
@@ -126,6 +129,12 @@ const ourStoryButton = css`
   img {
     display: block;
   }
+`;
+
+const footer = css`
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 10px;
 `;
 
 export default App;
