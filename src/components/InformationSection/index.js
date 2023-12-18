@@ -237,8 +237,18 @@ const listItem = css`
 `;
 
 const title = css`
+  position: relative;
   margin-bottom: 4px;
+  padding-left: 8px;
   font-size: 15px;
+
+  &:before {
+    content: '·';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 `;
 
 const content = css`
@@ -248,13 +258,7 @@ const content = css`
   line-height: 1.5;
   color: #333;
   word-break: keep-all;
-  &:before {
-    content: '·';
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+
   & + & {
     margin-top: 5px;
   }

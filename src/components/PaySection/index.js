@@ -148,7 +148,7 @@ const sectionTitle = css`
 `;
 
 const box = css`
-  padding: 16px;
+  padding: 24px 16px;
   background: rgba(240, 240, 240, 0.5);
   border-radius: 16px;
 
@@ -160,7 +160,7 @@ const box = css`
 const title = css`
   margin-bottom: 30px;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
 `;
 
 const listItem = css`
