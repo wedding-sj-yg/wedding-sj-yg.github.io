@@ -87,6 +87,12 @@ function App() {
             <img src="/images/icon-guide-arrow.png" alt="가이드 화살표" />
           </div>
         )}
+        <img
+          src="/images/icon-inactive.png"
+          alt="우리의 이야기 버튼 강조"
+          width={86}
+          css={guideInactive}
+        />
         <button
           type="button"
           css={[ourStoryButton, isHide && hideAnimation]}
@@ -144,13 +150,13 @@ const buttonWrapper = css`
 
 const guideAnimation = keyframes`
   0% {
-    transform: translateY(10px) rotate(90deg);
-  }
-  50% {
     transform: translateY(0px) rotate(90deg);
   }
+  50% {
+    transform: translateY(-10px) rotate(90deg);
+  }
   100% {
-    transform: translateY(10px) rotate(90deg);
+    transform: translateY(0px) rotate(90deg);
   }
 `;
 
@@ -158,7 +164,15 @@ const guideArrow = css`
   animation: ${guideAnimation} 1s ease infinite;
 `;
 
+const guideInactive = css`
+  position: absolute;
+  bottom: -15px;
+  left: -15px;
+`;
+
 const ourStoryButton = css`
+  position: relative;
+  z-index: 2;
   display: inline-block;
   background: #dcf2de;
   padding: 8px;
