@@ -1,9 +1,28 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import { useEffect } from 'react';
 
-const SpeechBubble = () => {
+const SpeechBubble = ({ onClose }) => {
+  useEffect(() => {
+    document.body.style.cssText = `
+      position: fixed;
+      top: -${window.scrollY}px;
+      overflow-y: scroll;
+      width: 100%;`;
+
+    return () => {
+      const scrollY = document.body.style.top;
+      document.body.style.cssText = '';
+
+      window.scrollTo(0, parseInt(scrollY || '0', 10) * -1);
+    };
+  }, []);
+
   return (
     <div css={root}>
+      <button type="button" css={closeButton} onClick={onClose}>
+        <img src="/images/icon-close.png" alt="닫기" width={16} />
+      </button>
       <h3 css={title}>
         <span css={highlighted}>
           <span css={zIndex}>꾹 눌러</span>
@@ -35,6 +54,12 @@ const root = css`
     border-right: 10px solid transparent;
     border-bottom: 0px solid transparent;
   }
+`;
+
+const closeButton = css`
+  position: absolute;
+  top: 12px;
+  right: 12px;
 `;
 
 const title = css`

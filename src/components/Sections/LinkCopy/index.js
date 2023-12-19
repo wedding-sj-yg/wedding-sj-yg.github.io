@@ -42,9 +42,9 @@ const content = css`
     align-items: center;
     margin: 0 auto;
     cursor: pointer;
-    background: #f5f5f5;
+    background: #2cbf89;
     border-radius: 12px;
-    padding: 8px 12px;
+    padding: 12px 20px;
   }
 `;
 

@@ -86,7 +86,7 @@ function App() {
       <div css={buttonWrapper}>
         {isModal && (
           <>
-            <SpeechBubble />
+            <SpeechBubble onClose={() => setIsModal(false)} />
             <img
               src="/images/icon-inactive.png"
               alt="우리의 이야기 버튼 강조"
@@ -99,7 +99,7 @@ function App() {
           type="button"
           css={[ourStoryButton, isHide && hideAnimation]}
           onClick={() =>
-            window.open('https://www.instagram.com/ssik_zip/', '_blank')
+            window.open('https://wedding-sj-yg.oopy.io/', '_blank')
           }
         >
           <img
