@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React from 'react';
 import { css } from '@emotion/react';
+import { copyToClipboard } from '../../utils';
 
 const BRIDE_LABELS_LIST = [
   {
@@ -9,12 +10,12 @@ const BRIDE_LABELS_LIST = [
     accountNumber: '1000-2013-4045',
   },
   {
-    name: '이경자',
+    name: '신부 어머니 이경자',
     bank: '토스뱅크',
     accountNumber: '1000-2013-4045',
   },
   {
-    name: '김연복',
+    name: '신부 아버지 김연복',
     bank: '토스뱅크',
     accountNumber: '1000-2013-4045',
   },
@@ -27,29 +28,18 @@ const GROOM_LABELS_LIST = [
     accountNumber: '1000-8301-7120',
   },
   {
-    name: '이영숙',
+    name: '신랑 어머니 이영숙',
     bank: '토스뱅크',
     accountNumber: '1000-8301-7120',
   },
   {
-    name: '이용호',
+    name: '신랑 아버지 이용호',
     bank: '토스뱅크',
     accountNumber: '1000-8301-7120',
   },
 ];
 
 const PaySection = () => {
-  const copyToClipboard = async (text) => {
-    try {
-      if (navigator.clipboard) {
-        await navigator.clipboard.writeText(text);
-        alert('계좌번호가 복사되었습니다.');
-      }
-    } catch (error) {
-      console.error('Failed to copy to clipboard: ', error);
-    }
-  };
-
   return (
     <div css={root}>
       <div css={sectionTitle}>
@@ -100,7 +90,10 @@ const PaySection = () => {
                   type="button"
                   css={copyButton}
                   onClick={() => {
-                    copyToClipboard(`${item.bank} ${item.accountNumber}`);
+                    copyToClipboard(
+                      `${item.bank} ${item.accountNumber}`,
+                      '계좌번호가 복사되었습니다.',
+                    );
                   }}
                 >
                   <img src="/images/icon-copy.png" alt="복사하기" width={16} />

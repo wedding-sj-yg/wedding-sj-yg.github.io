@@ -9,6 +9,7 @@ import InformationSection from './components/InformationSection';
 import PaySection from './components/PaySection';
 import PhotoSection from './components/PhotoSection';
 import ContactSection from './components/ContactSection';
+import LinkCopySection from './components/LinkCopySection';
 
 const SCROLL_SECTION_LENGTH = 4;
 
@@ -54,6 +55,7 @@ function App() {
       <ContactSection />
       <InformationSection />
       <PaySection />
+      <LinkCopySection />
       <div css={[scroll, appearFromBottomAnimation]}>
         <Lottie
           animationData={
@@ -76,7 +78,7 @@ function App() {
         />
       </button>
       <footer css={footer}>
-        © Directed by YeoGyu. Developed by SeongJun All Rights Reserved.
+        © Directed by YeoGyu, Developed by SeongJun. All Rights Reserved.
       </footer>
     </div>
   );
