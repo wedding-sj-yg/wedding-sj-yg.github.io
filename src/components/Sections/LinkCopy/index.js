@@ -43,6 +43,7 @@ const content = css`
     margin: 0 auto;
     cursor: pointer;
     background: #2cbf89;
+    color: #333;
     border-radius: 12px;
     padding: 12px 20px;
   }
