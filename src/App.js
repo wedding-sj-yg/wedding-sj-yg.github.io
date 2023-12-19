@@ -15,7 +15,10 @@ const SCROLL_SECTION_LENGTH = 4;
 
 function App() {
   const scrollRef = useRef(null);
+  const sentinel = useRef(null);
+
   const [animation, setAnimation] = useState(null);
+  const [isHide, setIsHide] = useState(false);
 
   const handleScroll = (e) => {
     const elementHeight = scrollRef.current.clientHeight - window.innerHeight;
@@ -35,11 +38,23 @@ function App() {
     }
   };
 
+  const handleObserver = (entries) => {
+    setIsHide(entries[0].isIntersecting);
+  };
+
   useEffect(() => {
+    let observer;
+
+    if (sentinel) {
+      observer = new window.IntersectionObserver(handleObserver);
+      observer.observe(sentinel.current);
+    }
+
     window.scrollTo(0, 0);
     window.addEventListener('scroll', handleScroll);
 
     return () => {
+      observer && observer.disconnect();
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
@@ -52,7 +67,7 @@ function App() {
       <InformationSection />
       <PaySection />
       <LinkCopySection />
-      <div css={[scroll, appearFromBottomAnimation]}>
+      <div css={[scroll, appearFromBottomAnimation, isHide && hideAnimation]}>
         <Lottie
           animationData={
             animation === 'FIRST'
@@ -62,9 +77,10 @@ function App() {
           style={{ width: '70px' }}
         />
       </div>
+      <div ref={sentinel}></div>
       <button
         type="button"
-        css={ourStoryButton}
+        css={[ourStoryButton, isHide && hideAnimation]}
         onClick={() =>
           window.open('https://www.instagram.com/ssik_zip/', '_blank')
         }
@@ -134,6 +150,11 @@ const footer = css`
   padding-bottom: 30px;
   text-align: center;
   font-size: 10px;
+`;
+
+const hideAnimation = css`
+  opacity: 0;
+  transition: all 0.2s;
 `;
 
 export default App;
