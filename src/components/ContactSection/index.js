@@ -1,5 +1,4 @@
 /** @jsxImportSource @emotion/react */
-import React from 'react';
 import { css } from '@emotion/react';
 
 const CONTACT_LABELS = [
@@ -74,21 +73,6 @@ const phoneButton = css`
 
 const groom = css`
   background: #fff;
-`;
-
-const highlighted = css`
-  position: relative;
-
-  &:after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 5px;
-    background: rgba(52, 232, 158, 0.3);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
 `;
 
 export default ContactSection;

@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { css } from '@emotion/react';
 
 const MAP_BUTTON_LABELS = [
@@ -256,7 +256,6 @@ const buttonsWrapper = css`
 `;
 
 const buttonStyle = css`
-  /* flex: 1; */
   width: 60px;
   border: 0;
   outline: 0;

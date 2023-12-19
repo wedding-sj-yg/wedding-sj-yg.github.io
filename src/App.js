@@ -35,10 +35,6 @@ function App() {
     }
   };
 
-  const handleClickFloatingButton = () => {
-    window.open('https://www.instagram.com/ssik_zip/', '_blank');
-  };
-
   useEffect(() => {
     window.scrollTo(0, 0);
     window.addEventListener('scroll', handleScroll);
@@ -69,7 +65,9 @@ function App() {
       <button
         type="button"
         css={ourStoryButton}
-        onClick={handleClickFloatingButton}
+        onClick={() =>
+          window.open('https://www.instagram.com/ssik_zip/', '_blank')
+        }
       >
         <img
           src="/images/icon-floating-black.png"
@@ -116,7 +114,6 @@ const ourStoryButton = css`
   bottom: 20px;
   right: 20px;
   display: inline-block;
-  /* background: #1a3e25; */
   background: #dcf2de;
   padding: 8px;
   border-radius: 50%;
