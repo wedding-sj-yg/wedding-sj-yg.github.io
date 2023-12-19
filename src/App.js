@@ -10,6 +10,7 @@ import PaySection from './components/PaySection';
 import PhotoSection from './components/PhotoSection';
 import ContactSection from './components/ContactSection';
 import LinkCopySection from './components/LinkCopySection';
+import Modal from './components/Modal';
 
 const SCROLL_SECTION_LENGTH = 4;
 
@@ -19,6 +20,7 @@ function App() {
 
   const [animation, setAnimation] = useState(null);
   const [isHide, setIsHide] = useState(false);
+  const [isModal, setIsModal] = useState(true);
 
   const handleScroll = (e) => {
     const elementHeight = scrollRef.current.clientHeight - window.innerHeight;
@@ -61,6 +63,7 @@ function App() {
 
   return (
     <div css={root}>
+      {isModal && <Modal onClose={() => setIsModal(false)} />}
       <ScrollSection scrollRef={scrollRef} animation={animation} />
       <PhotoSection />
       <ContactSection />
@@ -78,19 +81,26 @@ function App() {
         />
       </div>
       <div ref={sentinel}></div>
-      <button
-        type="button"
-        css={[ourStoryButton, isHide && hideAnimation]}
-        onClick={() =>
-          window.open('https://www.instagram.com/ssik_zip/', '_blank')
-        }
-      >
-        <img
-          src="/images/icon-floating-black.png"
-          alt="우리의 이야기"
-          width={40}
-        />
-      </button>
+      <div css={buttonWrapper}>
+        {isModal && (
+          <div css={guideArrow}>
+            <img src="/images/icon-guide-arrow.png" alt="가이드 화살표" />
+          </div>
+        )}
+        <button
+          type="button"
+          css={[ourStoryButton, isHide && hideAnimation]}
+          onClick={() =>
+            window.open('https://www.instagram.com/ssik_zip/', '_blank')
+          }
+        >
+          <img
+            src="/images/icon-floating-black.png"
+            alt="우리의 이야기"
+            width={40}
+          />
+        </button>
+      </div>
       <footer css={footer}>
         © Directed by YeoGyu, Developed by SeongJun. All Rights Reserved.
       </footer>
@@ -125,17 +135,36 @@ const appearFromBottomAnimation = css`
   animation: ${appearFromBottom} 1s ease;
 `;
 
-const ourStoryButton = css`
+const buttonWrapper = css`
   position: fixed;
   bottom: 20px;
   right: 20px;
+  z-index: 1001;
+`;
+
+const guideAnimation = keyframes`
+  0% {
+    transform: translateY(10px) rotate(90deg);
+  }
+  50% {
+    transform: translateY(0px) rotate(90deg);
+  }
+  100% {
+    transform: translateY(10px) rotate(90deg);
+  }
+`;
+
+const guideArrow = css`
+  animation: ${guideAnimation} 1s ease infinite;
+`;
+
+const ourStoryButton = css`
   display: inline-block;
   background: #dcf2de;
   padding: 8px;
   border-radius: 50%;
   border: 0;
   cursor: pointer;
-  z-index: 10;
   box-shadow:
     rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
     rgba(0, 0, 0, 0.1) 0px 4px 6px,
