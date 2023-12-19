@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { copyToClipboard } from '../../utils';
+import { copyToClipboard } from '../../../utils';
 
-const LinkCopySection = () => {
+const LinkCopy = () => {
   return (
     <div css={root}>
       <div css={content}>
@@ -63,4 +63,4 @@ const buttonText = css`
   font-weight: 700;
 `;
 
-export default LinkCopySection;
+export default LinkCopy;

@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { copyToClipboard } from '../../utils';
+import { copyToClipboard } from '../../../utils';
 
 const BRIDE_LABELS_LIST = [
   {
@@ -38,7 +38,7 @@ const GROOM_LABELS_LIST = [
   },
 ];
 
-const PaySection = () => {
+const Payments = () => {
   return (
     <div css={root}>
       <div css={sectionTitle}>
@@ -220,4 +220,4 @@ const copyButton = css`
   }
 `;
 
-export default PaySection;
+export default Payments;

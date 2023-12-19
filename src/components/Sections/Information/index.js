@@ -20,7 +20,7 @@ const MAP_BUTTON_LABELS = [
   },
 ];
 
-const InformationSection = () => {
+const Information = () => {
   const handleClickMapButton = (id) => {
     switch (id) {
       case 'NAVER': {
@@ -293,4 +293,4 @@ const naverMap = css`
   height: 200px;
 `;
 
-export default InformationSection;
+export default Information;

@@ -1,11 +1,11 @@
 /** @jsxImportSource @emotion/react */
 import { css, keyframes } from '@emotion/react';
 import Lottie from 'lottie-react';
-import congratulationLottie from '../../lotties/animation-congratulation.json';
-import heartLottie from '../../lotties/animation-heart.json';
+import congratulationLottie from '../../../lotties/animation-congratulation.json';
+import heartLottie from '../../../lotties/animation-heart.json';
 import { useEffect, useRef } from 'react';
 
-const ScrollSection = ({ scrollRef, animation }) => {
+const ScrollAnimation = ({ scrollRef, animation }) => {
   const heartRef = useRef();
 
   useEffect(() => {
@@ -250,4 +250,4 @@ const delayThree = css`
   }
 `;
 
-export default ScrollSection;
+export default ScrollAnimation;

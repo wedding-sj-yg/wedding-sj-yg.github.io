@@ -12,7 +12,7 @@ const CONTACT_LABELS = [
   },
 ];
 
-const ContactSection = () => {
+const Contacts = () => {
   return (
     <div css={root}>
       <div css={contents}>
@@ -75,4 +75,4 @@ const groom = css`
   background: #fff;
 `;
 
-export default ContactSection;
+export default Contacts;

@@ -3,14 +3,16 @@ import { css, keyframes } from '@emotion/react';
 import Lottie from 'lottie-react';
 import scrollDownBlackLottie from './lotties/animation-scroll-down-black.json';
 import scrollDownWhiteLottie from './lotties/animation-scroll-down-white.json';
-import ScrollSection from './components/ScrollSection';
 import { useEffect, useRef, useState } from 'react';
-import InformationSection from './components/InformationSection';
-import PaySection from './components/PaySection';
-import PhotoSection from './components/PhotoSection';
-import ContactSection from './components/ContactSection';
-import LinkCopySection from './components/LinkCopySection';
-import Modal from './components/Modal';
+import { Background, SpeechBubble } from './components/Common';
+import {
+  ScrollAnimation,
+  WeddingPhoto,
+  Contacts,
+  Information,
+  Payments,
+  LinkCopy,
+} from './components/Sections';
 
 const SCROLL_SECTION_LENGTH = 4;
 
@@ -63,13 +65,13 @@ function App() {
 
   return (
     <div css={root}>
-      {isModal && <Modal onClose={() => setIsModal(false)} />}
-      <ScrollSection scrollRef={scrollRef} animation={animation} />
-      <PhotoSection />
-      <ContactSection />
-      <InformationSection />
-      <PaySection />
-      <LinkCopySection />
+      {isModal && <Background onClose={() => setIsModal(false)} />}
+      <ScrollAnimation scrollRef={scrollRef} animation={animation} />
+      <WeddingPhoto />
+      <Contacts />
+      <Information />
+      <Payments />
+      <LinkCopy />
       <div css={[scroll, appearFromBottomAnimation, isHide && hideAnimation]}>
         <Lottie
           animationData={
@@ -84,9 +86,7 @@ function App() {
       <div css={buttonWrapper}>
         {isModal && (
           <>
-            <div css={guideArrow}>
-              <img src="/images/icon-guide-arrow.png" alt="가이드 화살표" />
-            </div>
+            <SpeechBubble />
             <img
               src="/images/icon-inactive.png"
               alt="우리의 이야기 버튼 강조"
@@ -148,22 +148,6 @@ const buttonWrapper = css`
   bottom: 20px;
   right: 20px;
   z-index: 1001;
-`;
-
-const guideAnimation = keyframes`
-  0% {
-    transform: translateY(0px) rotate(90deg);
-  }
-  50% {
-    transform: translateY(-10px) rotate(90deg);
-  }
-  100% {
-    transform: translateY(0px) rotate(90deg);
-  }
-`;
-
-const guideArrow = css`
-  animation: ${guideAnimation} 1s ease infinite;
 `;
 
 const guideInactive = css`

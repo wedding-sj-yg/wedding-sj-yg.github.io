@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 
-const PhotoSection = () => {
+const WeddingPhoto = () => {
   return (
     <div css={[text, line]}>
       <div>
@@ -31,4 +31,4 @@ const text = css`
   }
 `;
 
-export default PhotoSection;
+export default WeddingPhoto;
