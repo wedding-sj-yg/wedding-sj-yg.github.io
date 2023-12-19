@@ -83,16 +83,18 @@ function App() {
       <div ref={sentinel}></div>
       <div css={buttonWrapper}>
         {isModal && (
-          <div css={guideArrow}>
-            <img src="/images/icon-guide-arrow.png" alt="가이드 화살표" />
-          </div>
+          <>
+            <div css={guideArrow}>
+              <img src="/images/icon-guide-arrow.png" alt="가이드 화살표" />
+            </div>
+            <img
+              src="/images/icon-inactive.png"
+              alt="우리의 이야기 버튼 강조"
+              width={86}
+              css={guideInactive}
+            />
+          </>
         )}
-        <img
-          src="/images/icon-inactive.png"
-          alt="우리의 이야기 버튼 강조"
-          width={86}
-          css={guideInactive}
-        />
         <button
           type="button"
           css={[ourStoryButton, isHide && hideAnimation]}
