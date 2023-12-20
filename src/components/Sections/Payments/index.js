@@ -28,13 +28,13 @@ const GROOM_LABELS_LIST = [
   },
   {
     name: '신랑 어머니 이영숙',
-    bank: '토스뱅크',
-    accountNumber: '1000-8301-7120',
+    bank: '국민은행',
+    accountNumber: '509001-01-186296',
   },
   {
     name: '신랑 아버지 이용호',
-    bank: '토스뱅크',
-    accountNumber: '1000-8301-7120',
+    bank: '국민은행',
+    accountNumber: '625102-01-212511',
   },
 ];
 
@@ -90,7 +90,7 @@ const Payments = () => {
                   css={copyButton}
                   onClick={() => {
                     copyToClipboard(
-                      `${item.bank} ${item.accountNumber}`,
+                      `${item.bank} ${item.accountNumber.replace(/-/g, '')}`,
                       '계좌번호가 복사되었습니다.',
                     );
                   }}
