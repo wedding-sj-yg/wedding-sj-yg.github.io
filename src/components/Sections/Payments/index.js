@@ -10,13 +10,13 @@ const BRIDE_LABELS_LIST = [
   },
   {
     name: '신부 어머니 이경자',
-    bank: '토스뱅크',
-    accountNumber: '1000-2013-4045',
+    bank: '국민은행',
+    accountNumber: '045-21-0762545',
   },
   {
     name: '신부 아버지 김연복',
-    bank: '토스뱅크',
-    accountNumber: '1000-2013-4045',
+    bank: '제일은행',
+    accountNumber: '440-20-101282',
   },
 ];
 
@@ -61,7 +61,10 @@ const Payments = () => {
                   type="button"
                   css={copyButton}
                   onClick={() => {
-                    copyToClipboard(`${item.bank} ${item.accountNumber}`);
+                    copyToClipboard(
+                      `${item.bank} ${item.accountNumber.replace(/-/g, '')}`,
+                      '계좌번호가 복사되었습니다.',
+                    );
                   }}
                 >
                   <img src="/images/icon-copy.png" alt="복사하기" width={12} />

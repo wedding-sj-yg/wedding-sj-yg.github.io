@@ -18,11 +18,11 @@ const LinkCopy = () => {
           <span css={iconLink}>
             <img
               src="/images/icon-link.png"
-              alt="링크 주소 복사하기"
+              alt="청첩장 링크 복사하기"
               width={14}
             />
           </span>
-          <span css={buttonText}>링크 주소 복사하기</span>
+          <span css={buttonText}>청첩장 링크 복사하기</span>
         </button>
       </div>
     </div>

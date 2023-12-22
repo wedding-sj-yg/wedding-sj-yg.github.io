@@ -11,6 +11,7 @@ import {
   LinkCopy,
 } from './components/Sections';
 import { FloatingButton, ScrollArrow } from './components/Common';
+import { hasCookie, setCookie } from './utils';
 
 const SCROLL_SECTION_LENGTH = 4;
 
@@ -58,6 +59,8 @@ function App() {
       if (prev.isArrowGuide) {
         return { ...prev, isArrowGuide: false, isFloatingGuide: true };
       } else if (prev.isFloatingGuide) {
+        setCookie();
+
         return { ...prev, isBackground: false, isFloatingGuide: false };
       } else {
         return prev;
@@ -66,6 +69,18 @@ function App() {
   };
 
   useEffect(() => {
+    const isCookie = hasCookie();
+
+    setGuide((prev) => {
+      return isCookie
+        ? {
+            isBackground: false,
+            isArrowGuide: false,
+            isFloatingGuide: false,
+          }
+        : prev;
+    });
+
     let observer;
 
     if (sentinel) {
@@ -73,7 +88,10 @@ function App() {
       observer.observe(sentinel.current);
     }
 
-    window.scrollTo(0, 0);
+    window.onbeforeunload = () => {
+      window.scrollTo(0, 0);
+    };
+
     window.addEventListener('scroll', handleScroll);
 
     return () => {
