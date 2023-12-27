@@ -4,6 +4,9 @@ import { css } from '@emotion/react';
 const WeddingPhoto = () => {
   return (
     <div css={[text, line]}>
+      <div css={imageWrapper}>
+        <img src="/images/main-image.jpeg" alt="메인 사진" width="100%" />
+      </div>
       <div>
         <strong>김연복 · 이경자</strong>의 &nbsp;&nbsp;&nbsp;딸{' '}
         <strong>여규</strong>
@@ -14,6 +17,17 @@ const WeddingPhoto = () => {
     </div>
   );
 };
+
+const imageWrapper = css`
+  width: 90%;
+  max-width: 320px;
+  margin: 0 auto 20px;
+  border-radius: 15px;
+
+  img {
+    border-radius: 15px;
+  }
+`;
 
 const line = css`
   border-top: 1px solid #ededec;

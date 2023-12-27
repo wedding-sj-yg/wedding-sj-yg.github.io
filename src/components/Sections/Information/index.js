@@ -291,6 +291,7 @@ const iconTitle = css`
 const naverMap = css`
   width: 100%;
   height: 200px;
+  border-radius: 15px;
 `;
 
 export default Information;
