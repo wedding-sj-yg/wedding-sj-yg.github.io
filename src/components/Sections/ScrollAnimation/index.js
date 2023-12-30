@@ -226,7 +226,6 @@ const highlighted = css`
     background: rgba(52, 232, 158, 0.5);
     z-index: -1;
   }
-  /* box-shadow: inset 0 -10px 0 rgba(52, 232, 158, 0.5); */
 `;
 
 const delayOne = css`
