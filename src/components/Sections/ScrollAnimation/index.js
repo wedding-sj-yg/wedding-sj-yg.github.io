@@ -30,9 +30,9 @@ const ScrollAnimation = ({ scrollRef, animation }) => {
           css={[
             contentWrapper,
             animation === 'FIRST'
-              ? headBlackBackground
+              ? headBackgroundBlack
               : animation === 'SECOND' || animation === 'THIRD'
-                ? headWhiteBackground
+                ? headBackgroundWhite
                 : headBackgroundReverse,
           ]}
         >
@@ -47,15 +47,15 @@ const ScrollAnimation = ({ scrollRef, animation }) => {
           css={[
             contentWrapper,
             animation === 'SECOND'
-              ? headWhiteBackground
+              ? headBackgroundWhite
               : headBackgroundReverse,
           ]}
         >
           <h2
             css={[
               head,
-              multiLineTextWithBlackColor,
-              thirdHead,
+              multiLineTextWithBlack,
+              mb120,
               animation === 'SECOND' && headTransition,
             ]}
           >
@@ -86,14 +86,14 @@ const ScrollAnimation = ({ scrollRef, animation }) => {
         <div
           css={[
             contentWrapper,
-            animation === 'THIRD' ? headWhiteBackground : headBackgroundReverse,
+            animation === 'THIRD' ? headBackgroundWhite : headBackgroundReverse,
           ]}
         >
           <h2
             css={[
               head,
-              multiLineTextWithBlackColor,
-              thirdHead,
+              multiLineTextWithBlack,
+              mb120,
               animation === 'THIRD' && headTransition,
             ]}
           >
@@ -176,12 +176,12 @@ const appearFromBottomAnimation = css`
   animation: ${appearFromBottom} 1s ease;
 `;
 
-const headBlackBackground = css`
+const headBackgroundBlack = css`
   background: #000;
   transition: all 0.4s;
 `;
 
-const headWhiteBackground = css`
+const headBackgroundWhite = css`
   background: #fff;
   transition: all 0.4s;
 `;
@@ -204,11 +204,11 @@ const headTransition = css`
   transform: translateY(0px);
 `;
 
-const thirdHead = css`
+const mb120 = css`
   margin-bottom: 120px;
 `;
 
-const multiLineTextWithBlackColor = css`
+const multiLineTextWithBlack = css`
   color: #000;
   line-height: 1.5;
 `;
