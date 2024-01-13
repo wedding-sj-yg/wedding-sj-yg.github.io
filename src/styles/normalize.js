@@ -26,6 +26,8 @@ const normalize = css`
   html {
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-content-zooming: none;
+    -ms-touch-action: pan-x pan-y;
   }
 
   /* 섹션단위 요소들
