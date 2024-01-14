@@ -4,16 +4,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Global } from '@emotion/react';
 import normalize from './styles/normalize';
-import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
     <Global styles={normalize} />
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <App />
-    </BrowserRouter>
+    <App />
   </React.StrictMode>,
 );
 
