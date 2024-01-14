@@ -6,8 +6,8 @@ function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route exact path="/main" element={<Main />} />
-        <Route exact path="/senior" element={<Senior />} />
+        <Route path="/" element={<Main />} />
+        <Route path="/senior" element={<Senior />} />
       </Routes>
     </BrowserRouter>
   );
