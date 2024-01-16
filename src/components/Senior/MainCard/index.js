@@ -90,11 +90,12 @@ const name = css`
 
 const date = css`
   margin-top: 25px;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 400;
   text-align: center;
   letter-spacing: 0.08em;
-  line-height: 1.4em;
-  color: rgb(51, 51, 51);
+  line-height: 1.5em;
+  color: #666666;
 `;
 
 export default MainCard;

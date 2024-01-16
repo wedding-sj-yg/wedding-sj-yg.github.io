@@ -5,34 +5,34 @@ import GalleryModal from './GalleryModal';
 
 const IMAGE_LABELS = [
   {
-    imgUrl: '/images/senior/main-image.jpeg',
+    imgUrl: '/images/senior/image_gallery01.jpg',
   },
   {
-    imgUrl: '/images/senior/main-image.jpeg',
+    imgUrl: '/images/senior/image_gallery02.jpg',
   },
   {
-    imgUrl: '/images/senior/main-image.jpeg',
+    imgUrl: '/images/senior/image_gallery03.png',
   },
   {
-    imgUrl: '/images/senior/main-image.jpeg',
+    imgUrl: '/images/senior/image_gallery04.jpg',
   },
   {
-    imgUrl: '/images/senior/main-image.jpeg',
+    imgUrl: '/images/senior/image_gallery05.jpg',
   },
   {
-    imgUrl: '/images/senior/main-image.jpeg',
+    imgUrl: '/images/senior/image_gallery06.jpg',
   },
   {
-    imgUrl: '/images/senior/main-image.jpeg',
+    imgUrl: '/images/senior/image_gallery07.jpg',
   },
   {
-    imgUrl: '/images/senior/main-image.jpeg',
+    imgUrl: '/images/senior/image_gallery08.jpg',
   },
   {
-    imgUrl: '/images/senior/main-image.jpeg',
+    imgUrl: '/images/senior/image_gallery09.jpg',
   },
   {
-    imgUrl: '/images/senior/main-image.jpeg',
+    imgUrl: '/images/senior/image_gallery10.jpg',
   },
 ];
 
