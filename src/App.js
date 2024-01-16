@@ -6,7 +6,7 @@ function App() {
   return (
     <HashRouter>
       <Routes>
-        <Route exact path="/" element={<Main />} />
+        <Route exact path="/main" element={<Main />} />
         <Route exact path="/senior" element={<Senior />} />
       </Routes>
     </HashRouter>
