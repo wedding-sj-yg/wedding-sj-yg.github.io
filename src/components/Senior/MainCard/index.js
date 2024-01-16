@@ -37,7 +37,7 @@ const MainCard = () => {
 
 const imageCrop = css`
   width: 100%;
-  height: 450px;
+  height: 430px;
   overflow: hidden;
 `;
 
@@ -90,12 +90,12 @@ const name = css`
 
 const date = css`
   margin-top: 25px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   text-align: center;
   letter-spacing: 0.08em;
   line-height: 1.5em;
-  color: #666666;
+  color: #333333;
 `;
 
 export default MainCard;

@@ -26,14 +26,6 @@ const Greetings = () => {
         </div>
         저희 배움을 응원해주세요.
       </div>
-      <div css={box}>
-        <div css={boxText}>
-          <span>이용호 · 이영숙</span>의 장남 <strong>성준</strong>
-        </div>
-        <div css={boxText}>
-          <span>김연복 · 이경자</span>의 장녀 <strong>여규</strong>
-        </div>
-      </div>
     </div>
   );
 };
@@ -46,23 +38,6 @@ const root = css`
 const text = css`
   text-align: center;
   line-height: 2em;
-`;
-
-const box = css`
-  text-align: center;
-  margin-top: 40px;
-`;
-
-const boxText = css`
-  font-size: 13px;
-
-  span,
-  strong {
-    font-size: 16px;
-  }
-  & + & {
-    margin-top: 12px;
-  }
 `;
 
 const mainText = css`

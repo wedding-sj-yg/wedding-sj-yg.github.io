@@ -27,7 +27,7 @@ const Location = () => {
           <br />
           효성해링턴스퀘어 B동 7층
         </div>
-        <div>02-2197-0230</div>
+        <div css={tel}>02-2197-0230</div>
       </div>
       <div>
         <div id="map" css={naverMap} />
@@ -88,14 +88,19 @@ const box = css`
 `;
 
 const location = css`
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-size: 18px;
   font-weight: 600;
 `;
 
 const address = css`
   margin-bottom: 8px;
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+`;
+
+const tel = css`
+  font-size: 14px;
   line-height: 1.5;
 `;
 
@@ -111,7 +116,7 @@ const trafficWrapper = css`
 
 const traffic = css`
   & + & {
-    margin-top: 15px;
+    margin-top: 23px;
   }
 `;
 
@@ -125,6 +130,7 @@ const trafficText = css`
   font-size: 14px;
   word-break: keep-all;
   line-height: 1.5;
+  color: #333333;
 `;
 
 const dotted = css`
@@ -141,7 +147,7 @@ const dotted = css`
   }
 
   & + & {
-    margin-top: 6px;
+    margin-top: 10px;
   }
 `;
 

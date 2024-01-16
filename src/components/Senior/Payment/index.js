@@ -51,6 +51,7 @@ const title = css`
 const text = css`
   margin-top: 8px;
   font-size: 14px;
+  color: #333333;
 `;
 
 const buttonWrapper = css`

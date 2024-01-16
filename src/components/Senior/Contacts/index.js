@@ -4,7 +4,7 @@ import React from 'react';
 
 const CONTACTS_LABELS = [
   {
-    title: '신랑에게 연락하기',
+    title: '신랑에게<br />연락하기',
     phoneNumber: '01049254483',
     text: '신랑 측 혼주',
     parents: [
@@ -21,7 +21,7 @@ const CONTACTS_LABELS = [
     ],
   },
   {
-    title: '신부에게 연락하기',
+    title: '신부에게<br />연락하기',
     phoneNumber: '01091956525',
     text: '신부 측 혼주',
     parents: [
@@ -42,12 +42,23 @@ const CONTACTS_LABELS = [
 const Contacts = () => {
   return (
     <div css={root}>
+      <div css={box}>
+        <div css={boxText}>
+          <span>이용호 · 이영숙</span>의 장남 <strong>성준</strong>
+        </div>
+        <div css={boxText}>
+          <span>김연복 · 이경자</span>의 장녀 <strong>여규</strong>
+        </div>
+      </div>
       <ul css={list}>
         {CONTACTS_LABELS.map((item, index) => {
           return (
             <li key={index}>
               <div>
-                <div css={title}>{item.title}</div>
+                <div
+                  css={title}
+                  dangerouslySetInnerHTML={{ __html: item.title }}
+                />
                 <a href={`tel:${item.phoneNumber}`} css={telLink}>
                   <img
                     src="images/icon-telephone.png"
@@ -88,10 +99,29 @@ const root = css`
   padding: 50px 18px;
 `;
 
+const box = css`
+  margin-top: 30px;
+  padding-bottom: 100px;
+  text-align: center;
+`;
+
+const boxText = css`
+  font-size: 15px;
+
+  span,
+  strong {
+    font-size: 18px;
+  }
+  & + & {
+    margin-top: 20px;
+  }
+`;
+
 const list = css`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
+  gap: 60px;
 
   li {
     text-align: center;
@@ -99,14 +129,15 @@ const list = css`
 `;
 
 const title = css`
-  margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333333;
 `;
 
 const text = css`
-  margin: 30px auto 25px;
+  margin: 30px auto 15px;
   font-size: 16px;
-  color: rgb(51, 51, 51);
+  color: #333333;
 `;
 
 const boxItem = css`
@@ -119,15 +150,17 @@ const parents = css`
   display: inline-block;
   margin-right: 5px;
   font-size: 12px;
+  color: #333333;
 `;
 
 const parentsName = css`
   font-weight: 600;
+  color: #333333;
 `;
 
 const telLink = css`
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 25px;
   padding: 10px;
   background: rgb(255, 245, 242);
   border-radius: 50%;

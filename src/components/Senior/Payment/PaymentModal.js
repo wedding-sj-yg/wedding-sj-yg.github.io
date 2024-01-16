@@ -50,7 +50,9 @@ const PaymentModal = ({ payment, onClose }) => {
         <div css={wrapper}>
           <div css={head}>
             <div>
-              <strong>신랑 측 계좌번호</strong>
+              <strong>
+                {payment === 'GROOM' ? '신랑' : '신부'} 측 계좌번호
+              </strong>
             </div>
             <button type="button" onClick={onClose}>
               <img src="images/icon-close.png" alt="닫기 버튼" width={20} />
@@ -112,6 +114,7 @@ const root = css`
   box-sizing: border-box;
   background: #fff;
   z-index: 110;
+  font-family: 'San Francisco';
 `;
 
 const wrapper = css`

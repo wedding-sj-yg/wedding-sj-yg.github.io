@@ -98,7 +98,7 @@ const buttonText = css`
   margin-top: 10px;
   font-size: 14px;
   font-family: 'San Francisco';
-  color: #666666;
+  color: #333333;
   line-height: 1.5;
 `;
 
