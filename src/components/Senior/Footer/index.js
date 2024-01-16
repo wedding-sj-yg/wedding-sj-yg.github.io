@@ -12,7 +12,7 @@ const Footer = () => {
       content: {
         title: '이성준, 김여규의 결혼식에 초대합니다.',
         description: '2024년 3월 9일 오후 2시 아펠가모 공덕 라로브홀',
-        imageUrl: '/images/og-image.jpeg',
+        imageUrl: '%PUBLIC_URL%/images/og-image.jpeg',
         link: {
           mobileWebUrl: 'https://wedding-sj-yg.github.io/#/senior',
         },
