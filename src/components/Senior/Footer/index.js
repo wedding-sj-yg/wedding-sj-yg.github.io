@@ -52,7 +52,7 @@ const Footer = () => {
             type="button"
             onClick={() =>
               copyToClipboard(
-                'https://wedding-sj-yg.github.io/senior',
+                'https://wedding-sj-yg.github.io/#/senior',
                 '청첩장 주소가 복사되었습니다.',
               )
             }
