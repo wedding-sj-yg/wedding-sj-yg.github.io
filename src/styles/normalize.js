@@ -384,6 +384,13 @@ const normalize = css`
     margin: 0;
     padding: 0;
   }
+
+  a,
+  a:visited,
+  a:hover,
+  a:active {
+    color: #333;
+  }
 `;
 
 export default normalize;

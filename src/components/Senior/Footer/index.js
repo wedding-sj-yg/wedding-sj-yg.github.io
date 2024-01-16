@@ -14,14 +14,14 @@ const Footer = () => {
         description: '2024년 3월 9일 오후 2시 아펠가모 공덕 라로브홀',
         imageUrl: '/images/og-image.jpeg',
         link: {
-          mobileWebUrl: 'https://wedding-sj-yg.github.io/senior',
+          mobileWebUrl: 'https://wedding-sj-yg.github.io/#/senior',
         },
       },
       buttons: [
         {
           title: '모바일 청첩장 보러가기',
           link: {
-            mobileWebUrl: 'https://wedding-sj-yg.github.io/senior',
+            mobileWebUrl: 'https://wedding-sj-yg.github.io/#/senior',
           },
         },
       ],
@@ -80,7 +80,7 @@ const list = css`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
 `;
 
 const imageWrapper = css`
@@ -97,6 +97,8 @@ const imageWrapper = css`
 const buttonText = css`
   margin-top: 10px;
   font-size: 14px;
+  font-family: 'San Francisco';
+  color: #666666;
   line-height: 1.5;
 `;
 

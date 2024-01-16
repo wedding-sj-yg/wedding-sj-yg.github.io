@@ -60,9 +60,13 @@ const buttonWrapper = css`
 const payButton = css`
   width: 100%;
   border-radius: 25px;
-  background: rgb(255, 245, 242);
+  background: #f9f9fb;
   padding: 12px 0;
   font-weight: 600;
+  font-size: 14px;
+  font-family: 'San Francisco';
+  color: #616161;
+  border: 1px solid #eeeeef;
   cursor: pointer;
 
   & + & {
