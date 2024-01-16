@@ -13,19 +13,17 @@ const Greetings = () => {
         />
         <br />
         배우자가 되겠습니다.
-        <br />
-        <br />
-        아내에게 배우자는 마음과
-        <br />
-        남편에게 배우자는 자세와
-        <br />
-        서로에게 배우자는 의지로
-        <br />
-        한평생 서로에게
-        <br />
-        가장 좋은 배우자가 되겠습니다.
-        <br />
-        <br />
+        <div css={mainText}>
+          아내에게 배우자는 마음과
+          <br />
+          남편에게 배우자는 자세와
+          <br />
+          서로에게 배우자는 의지로
+          <br />
+          한평생 서로에게
+          <br />
+          가장 좋은 배우자가 되겠습니다.
+        </div>
         저희 배움을 응원해주세요.
       </div>
       <div css={box}>
@@ -65,6 +63,10 @@ const boxText = css`
   & + & {
     margin-top: 12px;
   }
+`;
+
+const mainText = css`
+  margin: 10px auto;
 `;
 
 export default Greetings;
