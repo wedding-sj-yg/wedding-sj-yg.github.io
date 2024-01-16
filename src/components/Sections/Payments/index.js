@@ -45,37 +45,6 @@ const Payments = () => {
         <span>마음 전하는 곳</span>
       </div>
       <div css={box}>
-        <div css={title}>신부측 계좌번호</div>
-        <ul>
-          {BRIDE_LABELS_LIST.map((item, index) => {
-            return (
-              <li css={listItem} key={index}>
-                <div>
-                  <div css={bankSection}>
-                    <span css={bank}>{item.bank}</span>
-                    <span>{item.accountNumber}</span>
-                  </div>
-                  <div css={name}>{item.name}</div>
-                </div>
-                <button
-                  type="button"
-                  css={copyButton}
-                  onClick={() => {
-                    copyToClipboard(
-                      `${item.bank} ${item.accountNumber.replace(/-/g, '')}`,
-                      '계좌번호가 복사되었습니다.',
-                    );
-                  }}
-                >
-                  <img src="/images/icon-copy.png" alt="복사하기" width={12} />
-                  복사하기
-                </button>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-      <div css={box}>
         <div css={title}>신랑측 계좌번호</div>
         <ul>
           {GROOM_LABELS_LIST.map((item, index) => {
@@ -99,6 +68,37 @@ const Payments = () => {
                   }}
                 >
                   <img src="/images/icon-copy.png" alt="복사하기" width={16} />
+                  복사하기
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+      <div css={box}>
+        <div css={title}>신부측 계좌번호</div>
+        <ul>
+          {BRIDE_LABELS_LIST.map((item, index) => {
+            return (
+              <li css={listItem} key={index}>
+                <div>
+                  <div css={bankSection}>
+                    <span css={bank}>{item.bank}</span>
+                    <span>{item.accountNumber}</span>
+                  </div>
+                  <div css={name}>{item.name}</div>
+                </div>
+                <button
+                  type="button"
+                  css={copyButton}
+                  onClick={() => {
+                    copyToClipboard(
+                      `${item.bank} ${item.accountNumber.replace(/-/g, '')}`,
+                      '계좌번호가 복사되었습니다.',
+                    );
+                  }}
+                >
+                  <img src="/images/icon-copy.png" alt="복사하기" width={12} />
                   복사하기
                 </button>
               </li>
