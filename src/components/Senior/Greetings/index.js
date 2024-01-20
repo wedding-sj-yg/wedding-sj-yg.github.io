@@ -31,11 +31,12 @@ const Greetings = () => {
 };
 
 const root = css`
-  padding: 50px 18px 70px;
+  padding: 70px 18px 90px;
   background: rgb(255, 245, 242);
 `;
 
 const text = css`
+  font-size: 18px;
   text-align: center;
   line-height: 2em;
 `;

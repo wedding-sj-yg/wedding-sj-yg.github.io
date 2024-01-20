@@ -106,7 +106,7 @@ const box = css`
 `;
 
 const boxText = css`
-  font-size: 15px;
+  font-size: 16px;
 
   span,
   strong {

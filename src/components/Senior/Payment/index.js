@@ -49,7 +49,7 @@ const title = css`
 `;
 
 const text = css`
-  margin-top: 8px;
+  margin-top: 10px;
   font-size: 14px;
   color: #333333;
 `;
@@ -66,7 +66,7 @@ const payButton = css`
   font-weight: 600;
   font-size: 14px;
   font-family: 'San Francisco';
-  color: #616161;
+  color: #333;
   border: 1px solid #eeeeef;
   cursor: pointer;
 

@@ -28,14 +28,14 @@ const BRIDE_PAYMENTS_LABELS = [
     accountNumber: '1000-2013-4045',
   },
   {
-    name: '신부 어머니 이경자',
-    bank: '국민은행',
-    accountNumber: '045-21-0762545',
-  },
-  {
     name: '신부 아버지 김연복',
     bank: '제일은행',
     accountNumber: '440-20-101282',
+  },
+  {
+    name: '신부 어머니 이경자',
+    bank: '국민은행',
+    accountNumber: '045-21-0762545',
   },
 ];
 
