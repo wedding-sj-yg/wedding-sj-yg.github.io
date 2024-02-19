@@ -8,11 +8,11 @@ const WeddingPhoto = () => {
         <img src="/images/main-image.jpeg" alt="메인 사진" width="100%" />
       </div>
       <div>
-        <strong>이용호 · 이영숙</strong>의 아들 <strong>성준</strong>
-      </div>
-      <div>
         <strong>김연복 · 이경자</strong>의 &nbsp;&nbsp;&nbsp;딸{' '}
         <strong>여규</strong>
+      </div>
+      <div>
+        <strong>이용호 · 이영숙</strong>의 아들 <strong>성준</strong>
       </div>
     </div>
   );
