@@ -121,7 +121,7 @@ const Information = () => {
                 <strong>지하철</strong>
               </div>
               <div css={content}>
-                공덕역 7번 출구 방향으로 나와 우측 골목 직진
+                공덕역 10번 출구 방향으로 나와 우측으로 돌아서 유턴
               </div>
             </li>
             <li css={listItem}>

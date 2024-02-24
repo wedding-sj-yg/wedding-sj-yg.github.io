@@ -38,7 +38,7 @@ const Location = () => {
             <div css={trafficTitle}>지하철 안내</div>
             <div css={trafficText}>
               <span css={dotted}>
-                공덕역 7번 출구 방향으로 나와 우측 골목 직진
+                공덕역 10번 출구 방향으로 나와 우측으로 돌아서 유턴
               </span>
             </div>
           </li>
